@@ -4,7 +4,7 @@ body {
     margin: 0; padding: 0;
     color: #333;
   }
-
+  /* Carrossel */
   .carrossel {
     display: flex;
     justify-content: center;
@@ -34,7 +34,7 @@ body {
     transform: scale(1.1);
     opacity: 1;
   }
-
+  /* Boas-vindas */
   .boas-vindas {
     text-align: center;
     padding: 40px 20px 60px 20px;
@@ -68,6 +68,7 @@ body {
     transform: scale(1.05);
   }
 
+  /* Cardápio principal */
   #cardapio {
     max-width: 1100px;
     margin: 20px auto;
@@ -82,6 +83,7 @@ body {
     text-align: center;
   }
 
+  /* Nav categorias */
   #nav-categorias {
     display: flex;
     justify-content: center;
@@ -105,12 +107,14 @@ body {
     color: #111;
   }
 
+  /* Cards container */
   #cards-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
   }
 
+  /* Card individual */
   .card {
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -180,7 +184,7 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-
+  /* Botão "Consultar Valores" (desktop) - visível somente no desktop */
 #btn-consultar-desktop {
   background-color: #4CAF50;
   color: white;
@@ -199,6 +203,7 @@ body {
   background-color: #3d8b3d;
 }
 
+/* Botão "Consultar Valores" (mobile) - padrão, visível por card */
 .card-btn-mobile {
   background-color: #4CAF50;
   border: none;
@@ -207,7 +212,7 @@ body {
   font-weight: 600;
   border-radius: 8px;
   text-align: center;
-  display: none;
+  display: none; /* escondido por padrão, aparece só no mobile */
   margin-top: auto;
   transition: background-color 0.3s ease;
 }
@@ -216,6 +221,7 @@ body {
   background-color: #3d8b3d;
 }
 
+/* TOQUE EM MOBILE: card interativo no toque */
 @media (max-width: 768px) {
   .card:active {
     transform: scale(1.05);
@@ -233,7 +239,7 @@ body {
 #btn-voltar-inicio {
   margin-top: 30px;
   margin-left: 10px;
-  background-color: #e74c3c;
+  background-color: #e74c3c; /* vermelho vivo */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -244,7 +250,7 @@ body {
 }
 
 #btn-voltar-inicio:hover {
-  background-color: #c0392b;
+  background-color: #c0392b; /* vermelho mais escuro no hover */
 }
 
 #acompanhar-pedido {
