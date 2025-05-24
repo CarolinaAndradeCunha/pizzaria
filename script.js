@@ -1,3 +1,4 @@
+// Dados dos produtos com imagens
 const produtos = {
   pizzas: [
     { nome: 'Pizza Vegetariana', preco: 35, img: 'https://www.shutterstock.com/shutterstock/photos/105950027/display_1500/stock-photo-pizza-vegetariana-105950027.jpg' },
@@ -16,6 +17,7 @@ const produtos = {
   ],
 };
 
+// Seletores principais
 const btnNovoPedido = document.getElementById('btn-novo-pedido');
 const btnAcompanhar = document.getElementById('btn-acompanhar');
 const btnOlharCardapio = document.getElementById('btn-olhar-cardapio');
@@ -39,10 +41,12 @@ const resultadoPedido = document.getElementById('resultado-pedido');
 
 const btnFinalizarPedido = document.getElementById('btn-finalizar-pedido');
 
+// Estado
 let categoriaAtual = 'pizzas';
 let carrinhoItens = [];
 let pedidos = {};
 
+// Mostrar só a seção escolhida
 function mostrarSecao(secao) {
   sectionBoasVindas.style.display = secao === 'boasVindas' ? 'block' : 'none';
   sectionCardapio.style.display = secao === 'cardapio' ? 'block' : 'none';
@@ -50,6 +54,7 @@ function mostrarSecao(secao) {
   novoPedidoSection.style.display = secao === 'novoPedido' ? 'block' : 'none';
 }
 
+// Renderizar cards dos produtos da categoria atual
 function renderizarCards() {
   cardsContainer.innerHTML = '';
 
@@ -69,6 +74,7 @@ function renderizarCards() {
     cardsContainer.appendChild(card);
   });
 
+  // Evento para botões "Adicionar"
   document.querySelectorAll('.card-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const idx = e.target.getAttribute('data-index');
@@ -77,12 +83,14 @@ function renderizarCards() {
   });
 }
 
+// Adicionar produto ao carrinho
 function adicionarAoCarrinho(produto) {
   carrinhoItens.push(produto);
   alert(`Adicionado ${produto.nome} ao carrinho.`);
   atualizarCarrinho();
 }
 
+// Atualizar visual do carrinho
 function atualizarCarrinho() {
   if (carrinhoItens.length === 0) {
     carrinhoDiv.style.display = 'none';
@@ -103,6 +111,7 @@ function atualizarCarrinho() {
 
     li.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
 
+    // Botão remover
     const btnRemover = document.createElement('button');
     btnRemover.textContent = 'Remover';
     btnRemover.classList.add('btn-remover'); // Use CSS para estilizar
@@ -121,10 +130,12 @@ function atualizarCarrinho() {
   totalCarrinho.textContent = total.toFixed(2);
 }
 
+// Gerar código aleatório para pedido
 function gerarCodigoPedido() {
   return Math.floor(100000 + Math.random() * 900000).toString();
 }
 
+// Finalizar pedido
 function finalizarPedido() {
   if (carrinhoItens.length === 0) {
     alert('Seu carrinho está vazio! Adicione itens antes de finalizar.');
@@ -144,6 +155,7 @@ function finalizarPedido() {
   mostrarSecao('boasVindas');
 }
 
+// Buscar pedido pelo código
 function buscarPedido() {
   const codigo = inputCodigoPedido.value.trim();
 
@@ -168,6 +180,9 @@ function buscarPedido() {
   resultadoPedido.textContent = texto;
 }
 
+// Eventos
+
+// Categorias do cardápio
 navCategorias.querySelectorAll('button').forEach(btn => {
   btn.addEventListener('click', () => {
     navCategorias.querySelectorAll('button').forEach(b => b.classList.remove('active'));
@@ -177,10 +192,12 @@ navCategorias.querySelectorAll('button').forEach(btn => {
   });
 });
 
+// Botão voltar para início
 btnVoltarInicio.addEventListener('click', () => {
   mostrarSecao('boasVindas');
 });
 
+// Botões principais
 btnNovoPedido.addEventListener('click', () => {
   mostrarSecao('cardapio');
   renderizarCards();
@@ -197,8 +214,11 @@ btnAcompanhar.addEventListener('click', () => {
   inputCodigoPedido.value = '';
 });
 
+// Botão finalizar pedido
 btnFinalizarPedido.addEventListener('click', finalizarPedido);
 
+// Botão buscar pedido
 btnBuscarPedido.addEventListener('click', buscarPedido);
 
+// Inicialização
 mostrarSecao('boasVindas');
