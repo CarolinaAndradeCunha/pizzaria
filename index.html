@@ -9,14 +9,12 @@
 </head>
 <body>
 
-  <!-- Carrossel -->
   <div class="carrossel">
     <img src="https://www.shutterstock.com/shutterstock/photos/2608725029/display_1500/stock-photo-homemade-italian-pizza-delicious-fresh-pizza-baked-in-a-home-portable-pellet-oven-2608725029.jpg" alt="Pizza saindo do forno" class="lateral" />
     <img src="https://www.shutterstock.com/shutterstock/photos/2482968129/display_1500/stock-photo-artisanal-pizzas-with-fresh-toppings-top-view-rustic-setting-2482968129.jpg" alt="Pizzas" class="central" />
     <img src="https://www.shutterstock.com/shutterstock/photos/1470157325/display_1500/stock-photo-sweet-pizza-with-chocolate-and-strawberry-top-view-1470157325.jpg" alt="Pizza doce" class="lateral" />
   </div>
 
-  <!-- Boas-vindas -->
   <section class="boas-vindas" id="boasVindas">
     <h1>Bem-vindo à Pizzaria Chelsea! 🍕</h1>
     <div class="botoes-principais">
@@ -26,7 +24,6 @@
     </div>
   </section>
 
-  <!-- Cardápio -->
   <section id="cardapio" style="display: none;">
     <h2>Cardápio</h2>
     <nav id="nav-categorias">
@@ -35,7 +32,6 @@
       <button data-cat="sobremesas">Sobremesas</button>
     </nav>
     <div id="cards-container">
-      <!-- Os cards de produtos aparecem aqui via JavaScript -->
     </div>
     <button id="btn-voltar-inicio">Voltar para Início</button>
   
@@ -47,11 +43,10 @@
     </div>
   </section>
 
-  <!-- Seção: Novo Pedido / Carrinho -->
   <section id="novo-pedido" style="display: none;">
     <h2>Seu Carrinho</h2>
     <div id="carrinho-itens">
-      <!-- Itens do carrinho via JavaScript -->
+      
     </div>
     <p><strong>Total:</strong> R$ <span id="total-carrinho">0,00</span></p>
     <button id="btn-finalizar">Finalizar Pedido</button>
@@ -59,7 +54,6 @@
     <button onclick="mostrarSecao('boasVindas')">Cancelar Pedido</button>
   </section>
 
-  <!-- Seção: Código do Pedido -->
   <section id="codigo-gerado" style="display: none;">
     <h2>Pedido Finalizado!</h2>
     <p>Seu código de acompanhamento é:</p>
@@ -67,7 +61,6 @@
     <button onclick="mostrarSecao('boasVindas')">Voltar para Início</button>
   </section>
 
-  <!-- Seção: Acompanhar Pedido -->
   <section id="acompanhar-pedido" style="display: none; padding: 20px; background: #fff; border-radius: 8px; max-width: 400px; margin: 20px auto;">
     <h2>Acompanhar Pedido</h2>
     <input
