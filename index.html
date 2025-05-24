@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizzaria Chelsea</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="carrossel">
+    <img src="https://www.shutterstock.com/shutterstock/photos/2608725029/display_1500/stock-photo-homemade-italian-pizza-delicious-fresh-pizza-baked-in-a-home-portable-pellet-oven-2608725029.jpg" alt="Pizza saindo do forno" class="lateral" />
+    <img src="https://www.shutterstock.com/shutterstock/photos/2482968129/display_1500/stock-photo-artisanal-pizzas-with-fresh-toppings-top-view-rustic-setting-2482968129.jpg" alt="Pizzas" class="central" />
+    <img src="https://www.shutterstock.com/shutterstock/photos/1470157325/display_1500/stock-photo-sweet-pizza-with-chocolate-and-strawberry-top-view-1470157325.jpg" alt="Pizza doce" class="lateral" />
+  </div>
+
+  <section class="boas-vindas" id="boasVindas">
+    <h1>Bem-vindo à Pizzaria Chelsea! 🍕</h1>
+    <div class="botoes-principais">
+      <button id="btn-novo-pedido">Novo Pedido</button>
+      <button id="btn-acompanhar">Acompanhar Pedido</button>
+      <button id="btn-olhar-cardapio">Olhar Cardápio</button>
+    </div>
+  </section>
+
+  <section id="cardapio" style="display: none;">
+    <h2>Cardápio</h2>
+    <nav id="nav-categorias">
+      <button data-cat="pizzas" class="active">Pizzas</button>
+      <button data-cat="bebidas">Bebidas</button>
+      <button data-cat="sobremesas">Sobremesas</button>
+    </nav>
+    <div id="cards-container">
+      <!-- Os cards de produtos aparecem aqui via JavaScript -->
+    </div>
+    <button id="btn-voltar-inicio">Voltar para Início</button>
+  
+    <div id="carrinho" style="display:none; border: 1px solid #ccc; padding: 15px; margin-top: 20px; border-radius: 8px; background:#fff;">
+      <h3>Carrinho</h3>
+      <ul id="lista-carrinho" style="list-style:none; padding-left: 0;"></ul>
+      <p><strong>Total:</strong> R$ <span id="total-carrinho">0.00</span></p>
+      <button id="btn-finalizar-pedido" style="background:#27ae60; color:#fff; border:none; padding: 10px 20px; border-radius: 6px; cursor:pointer;">Finalizar Pedido</button>
+    </div>
+  </section>
+
+  <section id="novo-pedido" style="display: none;">
+    <h2>Seu Carrinho</h2>
+    <div id="carrinho-itens">
+      
+    </div>
+    <p><strong>Total:</strong> R$ <span id="total-carrinho">0,00</span></p>
+    <button id="btn-finalizar">Finalizar Pedido</button>
+    <button onclick="mostrarSecao('cardapio')">Adicionar mais itens</button>
+    <button onclick="mostrarSecao('boasVindas')">Cancelar Pedido</button>
+  </section>
+
+  <section id="codigo-gerado" style="display: none;">
+    <h2>Pedido Finalizado!</h2>
+    <p>Seu código de acompanhamento é:</p>
+    <p id="codigo-pedido" class="codigo-pedido">123ABC</p>
+    <button onclick="mostrarSecao('boasVindas')">Voltar para Início</button>
+  </section>
+
+  <section id="acompanhar-pedido" style="display: none; padding: 20px; background: #fff; border-radius: 8px; max-width: 400px; margin: 20px auto;">
+    <h2>Acompanhar Pedido</h2>
+    <input
+      type="text"
+      id="input-codigo-pedido"
+      placeholder="Digite o código do pedido"
+      style="padding: 8px; width: 100%; max-width: 280px; margin-bottom: 10px; border-radius: 4px; border: 1px solid #ccc;"
+    />
+    <button
+      id="btn-ver-pedido"
+      style="padding: 8px 12px; cursor: pointer; background-color: #27ae60; color: white; border: none; border-radius: 4px;"
+    >
+      Ver Pedido
+    </button>
+    <div id="resultado-pedido" style="margin-top: 20px; font-weight: 600; color: #333;"></div>
+    <button onclick="mostrarSecao('boasVindas')" style="margin-top: 20px; padding: 8px 12px; border-radius: 4px; cursor: pointer;">Voltar para Início</button>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
