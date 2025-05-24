@@ -1,129 +1,133 @@
+/* Fonte geral e fundo */
 body {
-    font-family: 'Quicksand', sans-serif;
-    background: #fff8f0;
-    margin: 0; padding: 0;
-    color: #333;
-  }
-  /* Carrossel */
-  .carrossel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    max-width: 600px;
-    margin: 30px auto;
-  }
-  .carrossel img {
-    border-radius: 15px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  }
-  .carrossel img.central {
-    width: 300px;
-    height: 180px;
-    transform: scale(1.05);
-  }
-  .carrossel img.lateral {
-    width: 150px;
-    height: 90px;
-    opacity: 0.7;
-  }
-  .carrossel img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-  }
-  /* Boas-vindas */
-  .boas-vindas {
-    text-align: center;
-    padding: 40px 20px 60px 20px;
-  }
-  .boas-vindas h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 36px;
-    color: #D32F2F;
-    margin-bottom: 40px;
-  }
-  .botoes-principais {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  .botoes-principais button {
-    background-color: #8BC34A;
-    border: 4px solid #D32F2F;
-    color: white;
-    font-weight: 600;
-    font-size: 18px;
-    padding: 15px 30px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    min-width: 150px;
-  }
-  .botoes-principais button:hover {
-    background-color: #6fa634;
-    transform: scale(1.05);
-  }
+  font-family: 'Quicksand', sans-serif;
+  background: #fff8f0;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
 
-  /* Cardápio principal */
-  #cardapio {
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-    display: none;
-  }
-  #cardapio h2 {
-    font-family: 'Pacifico', cursive;
-    font-size: 32px;
-    color: #D32F2F;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+/* Carrossel */
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+.carrossel img {
+  border-radius: 15px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.carrossel img.central {
+  width: 300px;
+  height: 180px;
+  transform: scale(1.05);
+}
+.carrossel img.lateral {
+  width: 150px;
+  height: 90px;
+  opacity: 0.7;
+}
+.carrossel img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
 
-  /* Nav categorias */
-  #nav-categorias {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  #nav-categorias button {
-    background-color: #D32F2F;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  #nav-categorias button:hover,
-  #nav-categorias button.active {
-    background-color: #8BC34A;
-    color: #111;
-  }
+/* Seção de boas-vindas */
+.boas-vindas {
+  text-align: center;
+  padding: 40px 20px 60px 20px;
+}
+.boas-vindas h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 36px;
+  color: #D32F2F;
+  margin-bottom: 40px;
+}
 
-  /* Cards container */
-  #cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-  }
+/* Botões principais */
+.botoes-principais {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.botoes-principais button {
+  background-color: #8BC34A;
+  border: 4px solid #D32F2F;
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 15px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  min-width: 150px;
+}
+.botoes-principais button:hover {
+  background-color: #6fa634;
+  transform: scale(1.05);
+}
 
-  /* Card individual */
-  .card {
+/* Cardápio principal */
+#cardapio {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  display: none;
+}
+#cardapio h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  color: #D32F2F;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Navegação por categorias */
+#nav-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+#nav-categorias button {
+  background-color: #D32F2F;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#nav-categorias button:hover,
+#nav-categorias button.active {
+  background-color: #8BC34A;
+  color: #111;
+}
+
+/* Cards de produtos */
+#cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
   border: 1px solid #ccc;
   border-radius: 6px;
   padding: 10px;
-  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-img {
@@ -132,6 +136,63 @@ body {
   border-radius: 6px;
   object-fit: cover;
   margin-bottom: 10px;
+}
+
+.card-content {
+  padding: 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 22px;
+  color: #D32F2F;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.card-preco {
+  font-weight: 700;
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.card-btn {
+  background-color: #8BC34A;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn-mobile {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  display: none;
+  margin-top: auto;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn-mobile:hover {
+  background-color: #3d8b3d;
 }
 
 .btn-remover {
@@ -149,42 +210,7 @@ body {
   background-color: #c0392b;
 }
 
-  .card-content {
-    padding: 15px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card-title {
-    font-family: 'Pacifico', cursive;
-    font-size: 22px;
-    color: #D32F2F;
-    margin-bottom: 8px;
-  }
-  .card-desc {
-    flex-grow: 1;
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 12px;
-  }
-  .card-preco {
-    font-weight: 700;
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 12px;
-  }
-  .card-btn {
-    background-color: #8BC34A;
-    border: none;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  /* Botão "Consultar Valores" (desktop) - visível somente no desktop */
+/* Botão "Consultar Valores" para desktop */
 #btn-consultar-desktop {
   background-color: #4CAF50;
   color: white;
@@ -198,30 +224,11 @@ body {
   margin: 40px auto 0 auto;
   transition: background-color 0.3s ease;
 }
-
 #btn-consultar-desktop:hover {
   background-color: #3d8b3d;
 }
 
-/* Botão "Consultar Valores" (mobile) - padrão, visível por card */
-.card-btn-mobile {
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  padding: 12px 16px;
-  font-weight: 600;
-  border-radius: 8px;
-  text-align: center;
-  display: none; /* escondido por padrão, aparece só no mobile */
-  margin-top: auto;
-  transition: background-color 0.3s ease;
-}
-
-.card-btn-mobile:hover {
-  background-color: #3d8b3d;
-}
-
-/* TOQUE EM MOBILE: card interativo no toque */
+/* Responsivo */
 @media (max-width: 768px) {
   .card:active {
     transform: scale(1.05);
@@ -236,10 +243,11 @@ body {
   }
 }
 
+/* Botão Voltar */
 #btn-voltar-inicio {
   margin-top: 30px;
   margin-left: 10px;
-  background-color: #e74c3c; /* vermelho vivo */
+  background-color: #e74c3c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -248,17 +256,17 @@ body {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 #btn-voltar-inicio:hover {
-  background-color: #c0392b; /* vermelho mais escuro no hover */
+  background-color: #c0392b;
 }
 
+/* Página acompanhar pedido */
 #acompanhar-pedido {
   max-width: 600px;
   margin: auto;
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   font-family: 'Arial', sans-serif;
 }
@@ -274,7 +282,7 @@ body {
   border-radius: 6px;
   padding: 15px;
   margin-bottom: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .pedido-card h3 {
@@ -301,11 +309,9 @@ body {
 .pedido-status.recebido {
   background-color: #3498db;
 }
-
 .pedido-status.preparando {
   background-color: #f39c12;
 }
-
 .pedido-status.entregue {
   background-color: #27ae60;
 }
